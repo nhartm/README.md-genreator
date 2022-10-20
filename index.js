@@ -70,7 +70,7 @@ const questions = [
             if (user_tableofcontents) {
                 return true;
             } else {
-                console.log('You must enter how to use this project  to contiue.');
+                console.log('You must enter how to use this project to contiue.');
                 return false;
             }
         }
@@ -80,25 +80,72 @@ const questions = [
         type: 'checkbox', 
         name: 'license',
         message: 'Pick which license that you would like to use for your project.',
-        choices:
+        choices: ['MIT', 'apache', 'GPLv3', 'GPLv2', 'other'],
+        validate: user_license => {
+            if (user_license) {
+                return true;
+            } else {
+                console.log("You must choose a license, if your license isn't represented, then choose 'other'.");
+                return false;
             }
         }
-    },
+            },
     // Contibutions:
-    {
+    { 
+    type: 'input', 
+    name: 'contributing',
+    message: 'Describe how to others can contribute to your project.',
+    validate: user_contributing => {
+        if (user_contributing) {
+            return true;
+        } else {
+            console.log('You must describe how the user can contribute to your project.');
+            return false;
+        }
+    }
 
     },
     // Tests:
     {
-
+        type: 'input', 
+        name: 'test',
+        message: 'How can a user test your project out?',
+        validate: user_test => {
+            if (user_test) {
+                return true;
+            } else {
+                console.log('Describe how to test this project to continue.');
+                return false;
+            }
+        }
     },
     // Questions: 
     {
-
+        type: 'input', 
+        name: 'github',
+        message: 'Enter your github username.',
+        validate: user_github => {
+            if (user_github) {
+                return true;
+            } else {
+                console.log('You must enter your Github username to contiue.');
+                return false;
+            }
+        }
     },
-
-
-
+    {
+        type: 'input', 
+        name: 'email',
+        message: 'Enter your email so that the user can ask any questions they may have.',
+        validate: user_email => {
+            if (user_email) {
+                return true;
+            } else {
+                console.log('You must enter your email to contiue.');
+                return false;
+            }
+        }
+    }
 
 ];
 

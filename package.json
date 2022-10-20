@@ -1,14 +1,21 @@
 {
-  "name": "static-site",
+  "name": "readme.md-genreator",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhartm/README.md-genreator.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "inquirer": "8.2.4"
-  }
+  "bugs": {
+    "url": "https://github.com/nhartm/README.md-genreator/issues"
+  },
+  "homepage": "https://github.com/nhartm/README.md-genreator#readme",
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
 }
